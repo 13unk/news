@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 import AIAssistant from "@/components/AIAssistant";
-import NewsHeader from "@/components/NewsHeader";
-import NewsNav from "@/components/NewsNav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +20,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "UNK'ED NEWS",
+  title: "UNK'ED",
   description: "Menace: Unknown - Global Dispatch",
 };
 
@@ -34,15 +32,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased selection:bg-emerald-500/30`}
       >
-        <div className="relative min-h-screen">
-          <NewsHeader />
-          <div className="pt-24 md:pt-48">
-            <NewsNav />
-            {children}
-          </div>
-        </div>
+        {children}
         <AIAssistant />
       </body>
     </html>
