@@ -22,9 +22,9 @@ export default function NewsHeader() {
 
       {/* Central Branding */}
       <div className="absolute inset-0 flex items-start justify-center pointer-events-none pt-4 md:pt-14">
-        <Link href="/" className="pointer-events-auto">
+        <div className="pointer-events-auto">
           <img alt="UNK Logo" className="h-10 md:h-24 w-auto object-contain transform scale-125 md:scale-150 transition-transform brightness-[0.8] drop-shadow-[0_2px_2px_rgba(255,255,255,0.8)]" src="https://i.postimg.cc/2jKR5Cpd/unk-logo.png" style={{ filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.5))' }} />
-        </Link>
+        </div>
       </div>
 
       {/* Right Block */}
