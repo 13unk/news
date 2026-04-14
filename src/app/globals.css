@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #fafafa;
+  --foreground: #111111;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #fafafa;
+    --foreground: #111111;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background-color: rgba(59, 130, 246, 0.3);
+}
+
+/* CUSTOM SCROLLBARS */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #e4e4e7;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4d4d8;
+}
+
+/* UTILITIES */
+.scrollbarHide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbarHide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-anchor: none;
+}
+
+.mask-fade {
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}
+
+/* THEMED COMPONENTS */
+.minecraft-font {
+  font-family: 'Press Start 2P', cursive;
+  line-height: 1.6;
+}
+.text-glow {
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
+}
+.pixelated {
+  image-rendering: pixelated;
+}
+.skin-shadow {
+  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.6));
+}
+
+.carved {
+  background: #fafafa;
+  box-shadow: 
+    inset 1px 1px 3px rgba(0, 0, 0, 0.12), 
+    inset -1px -1px 3px rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+}
+
+.carved:hover {
+  box-shadow: 
+    inset 2px 2px 5px rgba(0, 0, 0, 0.15), 
+    inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+  transform: translateY(1px);
+}
+
+.carvedIcon {
+  box-shadow: 
+    inset 1px 1px 2px rgba(0, 0, 0, 0.15), 
+    inset -1px -1px 2px rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  border-radius: 10px;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.carvedIcon:hover {
+  box-shadow: 
+    inset 2px 2px 4px rgba(0, 0, 0, 0.2), 
+    inset -2px -2px 4px rgba(255, 255, 255, 0.8);
+}
