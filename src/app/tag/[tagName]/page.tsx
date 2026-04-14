@@ -7,7 +7,7 @@ import { useParams, useRouter } from "next/navigation";
 import Script from "next/script";
 import { ArrowLeft, Search } from "lucide-react";
 
-import newsData from "../../../../data/news.json";
+import newsData from "../../../data/news.json";
 import { slugify, formatDateForUrl } from "../../page";
 
 // Extract unique tags and sort them alphabetically

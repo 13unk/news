@@ -6,7 +6,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { ArrowLeft, Clock, Share2, Bookmark, ChevronLeft, ChevronRight, X } from "lucide-react";
 
-import newsData from "../../data/news.json";
+import newsData from "../data/news.json";
 
 const newsItems = newsData;
 

@@ -1,4 +1,4 @@
-import newsData from "../../../../data/news.json";
+import newsData from "../../../data/news.json";
 import ArticleClient from "./ArticleClient";
 import { notFound } from "next/navigation";
 
