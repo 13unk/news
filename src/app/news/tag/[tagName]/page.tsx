@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import Script from "next/script";
 import { ArrowLeft, Search } from "lucide-react";
+import NewsFooter from "@/components/NewsFooter";
 
 import newsData from "../../../../data/news.json";
 import { slugify, formatDateForUrl } from "../../page";
@@ -178,7 +179,6 @@ export default function TagPage() {
                             <span className="tactile-etched text-[13px] font-bold tracking-[0.05em] uppercase w-1/3 text-right leading-none">
                               {news.date.split(' ')[2]}
                             </span>
-                          </div>
                         </div>
                       </motion.article>
                     </ArticleWrapper>
@@ -241,16 +241,7 @@ export default function TagPage() {
 
         </div>
 
-        <footer className="mt-32 pt-16 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-8 font-mono">
-          <p className="text-zinc-400 text-[10px] font-bold tracking-[0.3em] uppercase">
-            © 2026 UNK GLOBAL DISPATCH / ACCESS GRANTED
-          </p>
-          <div className="flex gap-12">
-            {["INSTAGRAM", "X", "RADIO"].map(social => (
-              <button key={social} className="text-zinc-400 hover:text-black text-[10px] font-black tracking-[0.3em] transition-colors">{social}</button>
-            ))}
-          </div>
-        </footer>
+        <NewsFooter />
       </div>
 
       <Script 
