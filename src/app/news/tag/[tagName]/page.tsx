@@ -40,7 +40,7 @@ const renderTitle = (title: string) => {
     if (part === '\n') return <br key={i} />;
     if (part.startsWith('<b>') && part.endsWith('</b>')) {
       const content = part.substring(3, part.length - 4);
-      return <span key={i} className="text-[#9B5DE0]">{content}</span>;
+      return <span key={i} className="text-[#6A4378]">{content}</span>;
     }
     return part;
   });
@@ -103,7 +103,7 @@ export default function TagPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#fafafa] text-zinc-950 font-sans selection:bg-[#9B5DE0]/10 overflow-x-hidden">
+    <main className="min-h-screen bg-background text-zinc-950 font-sans selection:bg-[#9B5DE0]/10 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-6 pb-20">
         <Link href="/" className="flex items-center gap-2 text-[10px] font-black tracking-widest uppercase text-zinc-400 hover:text-[#9B5DE0] transition-colors group/back mb-16">
           <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" />
@@ -146,33 +146,36 @@ export default function TagPage() {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.95 }}
-                        whileHover={{ scale: 1.02 }}
-                        className="group relative flex flex-col p-6 rounded-2xl bg-[#fafafa] shadow-[inset_6px_6px_15_rgba(0,0,0,0.05),inset_-4px_-4px_10px_#ffffff] border border-black/5 cursor-pointer"
+                        className="group tactile-niche flex flex-col pt-6 px-6 pb-6 cursor-pointer"
                       >
-                        <div className="relative aspect-[2/1] rounded-xl overflow-hidden border border-black/5 bg-white mb-6 shadow-[inset_2px_2px_8px_rgba(0,0,0,0.15)]">
-                          <img 
-                            src={news.image} 
-                            alt={news.title} 
-                            className="w-full h-full object-cover grayscale-[10%] group-hover:grayscale-0 transition-all duration-700" 
-                          />
-                          <div className="absolute inset-0 shadow-[inset_0_4px_12px_rgba(0,0,0,0.15)] pointer-events-none" />
+                        <div className="tactile-insert relative aspect-[2/1] mb-6" style={{ backgroundColor: '#A988A7' }}>
+                          <div className="w-full h-full flex items-center justify-center">
+                            <div className="w-12 h-12 opacity-30 mix-blend-soft-light grayscale brightness-0">
+                              <img src={group.img} alt="" className="w-full h-full object-contain" />
+                            </div>
+                          </div>
                         </div>
                         
-                        <div className="flex flex-col flex-1">
-                          <h3 className="text-lg font-[var(--font-montserrat)] font-black mb-3 leading-[1.1] tracking-tighter uppercase line-clamp-4 min-h-[4.4em]">
+                          <h3 className="tactile-etched text-[1.1rem] font-[var(--font-archivo)] font-semibold mb-3 leading-[1.2] tracking-[-0.02em] uppercase line-clamp-4 min-h-[4.8em]">
                             {renderTitle(news.title)}
                           </h3>
                           
-                          <div className="mt-auto pt-4 flex items-center justify-between border-t border-black/[0.03] gap-2">
-                            <span className="text-[9px] font-bold text-zinc-400 tracking-[0.2em] uppercase w-1/3 text-left">
+                          <div className="mt-auto pt-5 flex items-center justify-between tactile-divider relative gap-2">
+                            <span className="tactile-etched text-[13px] font-bold tracking-[0.05em] uppercase w-1/3 text-left leading-none">
                               {news.date.split(' ').slice(0, 2).join(' ')}
                             </span>
                             
-                            <div className="w-8 h-8 opacity-40 group-hover:opacity-100 transition-all duration-500 scale-90 group-hover:scale-110 flex items-center justify-center">
-                              <img src={group.img} alt={group.label} className="w-full h-full object-contain" />
+                            <div className="w-8 h-8 opacity-70 flex items-center justify-center">
+                              <div 
+                                className="tactile-icon-mask w-full h-full"
+                                style={{ 
+                                  maskImage: `url(${group.img})`,
+                                  WebkitMaskImage: `url(${group.img})` 
+                                }}
+                              />
                             </div>
 
-                            <span className="text-[9px] font-bold text-zinc-400 tracking-[0.2em] uppercase w-1/3 text-right">
+                            <span className="tactile-etched text-[13px] font-bold tracking-[0.05em] uppercase w-1/3 text-right leading-none">
                               {news.date.split(' ')[2]}
                             </span>
                           </div>

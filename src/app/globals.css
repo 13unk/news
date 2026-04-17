@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafafa;
+  --background: #CFC9BD;
   --foreground: #111111;
 }
 
@@ -15,7 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #fafafa;
+    --background: #CFC9BD;
     --foreground: #111111;
   }
 }
@@ -34,13 +34,16 @@ body {
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #e4e4e7;
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #d4d4d8;
 }
@@ -49,6 +52,7 @@ body {
 .scrollbarHide::-webkit-scrollbar {
   display: none;
 }
+
 .scrollbarHide {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -57,6 +61,7 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -72,35 +77,38 @@ body {
   font-family: 'Press Start 2P', cursive;
   line-height: 1.6;
 }
+
 .text-glow {
   text-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
 }
+
 .pixelated {
   image-rendering: pixelated;
 }
+
 .skin-shadow {
-  filter: drop-shadow(0 15px 25px rgba(0,0,0,0.6));
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.6));
 }
 
 .carved {
   background: #fafafa;
-  box-shadow: 
-    inset 1px 1px 3px rgba(0, 0, 0, 0.12), 
+  box-shadow:
+    inset 1px 1px 3px rgba(0, 0, 0, 0.12),
     inset -1px -1px 3px rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(0, 0, 0, 0.03);
   transition: all 0.2s ease;
 }
 
 .carved:hover {
-  box-shadow: 
-    inset 2px 2px 5px rgba(0, 0, 0, 0.15), 
+  box-shadow:
+    inset 2px 2px 5px rgba(0, 0, 0, 0.15),
     inset -2px -2px 5px rgba(255, 255, 255, 0.8);
   transform: translateY(1px);
 }
 
 .carvedIcon {
-  box-shadow: 
-    inset 1px 1px 2px rgba(0, 0, 0, 0.15), 
+  box-shadow:
+    inset 1px 1px 2px rgba(0, 0, 0, 0.15),
     inset -1px -1px 2px rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(0, 0, 0, 0.02);
   border-radius: 10px;
@@ -112,7 +120,100 @@ body {
 }
 
 .carvedIcon:hover {
-  box-shadow: 
-    inset 2px 2px 4px rgba(0, 0, 0, 0.2), 
+  box-shadow:
+    inset 2px 2px 4px rgba(0, 0, 0, 0.2),
     inset -2px -2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.tactile-niche {
+  /* Fondo base del chasis */
+  background-color: var(--background);
+  border-radius: 28px;
+  /* Biselado de RECORTE DE PAPEL (Inward Bevel) */
+  box-shadow: 
+    /* 1. PERFILADO INTERNO AFILADO (USAMOS SPREAD PARA SEGUIR EL BORDER-RADIUS) */
+    inset -2px 2px 0px 6px rgba(0, 0, 0, 0.2),
+    /* 2. EL INICIO DE LA CURVA */
+    0 0 15px 5px rgba(0, 0, 0, 0.08),
+    /* 3. EL LABIO SUPERIOR */
+    -2px -2px 6px rgba(255, 255, 255, 0.6),
+    /* 4. LA RAMPA INTERIOR */
+    inset 0 0 10px 12px rgba(0, 0, 0, 0.15),
+    /* 5. LA PROFUNDIDAD TÉCNICA */
+    inset -25px 25px 40px rgba(0, 0, 0, 0.65),
+    /* 6. SOMBRA DE VOLUMEN EXTERNO */
+    0 12px 24px -10px rgba(0, 0, 0, 0.3);
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.tactile-insert {
+  background: #A988A7;
+  border-radius: 14px;
+  /* Pieza en relieve sólido con perfilado interno en los 4 lados */
+  box-shadow:
+    /* Sombras externas nítidas y más grandes */
+    -10px 10px 6px rgba(0, 0, 0, 0.4),
+    -3px 3px 3px rgba(0, 0, 0, 0.3),
+    inset 0 0 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.tactile-insert::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  /* Perfilado interno uniforme sobre el contenido (para fotos) */
+  box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.tactile-etched {
+  text-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.15);
+  /* Sombra negra sutil para efecto grabado */
+}
+
+.tactile-divider {
+  border-top: 3px solid #4A2E53;
+}
+
+.tactile-pill-niche {
+  background-color: var(--background);
+  border-radius: 9999px;
+  box-shadow:
+    inset 12px 12px 30px rgba(0, 0, 0, 0.3),
+    inset -8px -8px 20px rgba(255, 255, 255, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tactile-track {
+  background-color: #A988A7;
+  border-radius: 9999px;
+  /* Carril Lila Mate */
+  box-shadow:
+    inset 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.tactile-knob {
+  background-color: #6D467B;
+  border-radius: 9999px;
+  /* Mando Morado Mate */
+  box-shadow:
+    -2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.tactile-icon-mask {
+  background-color: #8E74A5;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  filter: drop-shadow(0.5px 0.5px 0px rgba(0, 0, 0, 0.2));
 }

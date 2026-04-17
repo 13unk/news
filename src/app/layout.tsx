@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Montserrat } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat, Archivo } from "next/font/google";
 import "./globals.css";
 import AIAssistant from "@/components/AIAssistant";
 
@@ -19,6 +19,12 @@ const montserrat = Montserrat({
   weight: ["800"],
 });
 
+const archivo = Archivo({
+  variable: "--font-archivo",
+  subsets: ["latin"],
+  weight: ["500", "600"],
+});
+
 export const metadata: Metadata = {
   title: "UNK'ED",
   description: "Menace: Unknown - Global Dispatch",
@@ -32,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased selection:bg-emerald-500/30`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${archivo.variable} antialiased selection:bg-emerald-500/30`}
       >
         {children}
         <AIAssistant />

@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Lock } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function AIAssistant() {
   const [isLocked, setIsLocked] = useState(false);
@@ -12,58 +11,39 @@ export default function AIAssistant() {
     setIsLocked(true);
     setTimeout(() => {
       setIsLocked(false);
-    }, 1200); // Reset state after 1.2 seconds
+    }, 500); // Reset state after 0.5 seconds
   };
 
   return (
     <div className="fixed bottom-8 right-8 z-[200]">
-      <motion.button 
-        onClick={handleLock}
-        disabled={isLocked}
-        whileHover={{ scale: isLocked ? 1 : 1.1 }}
-        whileTap={{ scale: isLocked ? 1 : 0.95 }}
-        className={`w-16 h-16 rounded-full bg-transparent overflow-hidden transition-all duration-700 group relative border-none outline-none ${
-          isLocked 
-            ? 'shadow-none' 
-            : 'cursor-pointer shadow-[0_15px_30px_rgba(0,0,0,0.5)]'
-        }`}
-      >
-        <motion.img 
-          animate={{ 
-            filter: isLocked ? "grayscale(1)" : "grayscale(0)",
-            opacity: isLocked ? 0.3 : 1
+      <div className="w-20 h-20 tactile-pill-niche p-2 flex items-center justify-center">
+        <motion.button 
+          onClick={handleLock}
+          disabled={isLocked}
+          initial={{ 
+            boxShadow: "inset -4px -4px 10px rgba(0,0,0,0.4), inset 4px 4px 8px rgba(255,255,255,0.2), 4px 4px 12px rgba(0,0,0,0.3)",
+            y: 0 
           }}
-          transition={{ duration: 0.3 }}
-          src="https://i.postimg.cc/mr7MNkX4/nown.png" 
-          alt="AI Assistant Nown" 
-          className="w-full h-full object-cover" 
-        />
-        
-        <AnimatePresence>
-          {isLocked && (
-            <motion.div 
-              initial={{ scale: 0.2, opacity: 0 }}
-              animate={{ 
-                scale: 1, 
-                opacity: 1, 
-                rotate: [0, -15, 15, -15, 15, 0]
-              }}
-              exit={{ scale: 0.5, opacity: 0 }}
-              transition={{ 
-                type: "spring", 
-                stiffness: 800, 
-                damping: 15,
-                rotate: { duration: 0.3 }
-              }}
-              className="absolute inset-0 flex items-center justify-center pointer-events-none"
-            >
-              <div className="relative">
-                <Lock className="w-8 h-8 text-black drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]" />
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.button>
+          whileTap={{ 
+            scale: 0.9,
+            boxShadow: "inset -12px 12px 15px rgba(0, 0, 0, 0.9), inset 6px -6px 10px rgba(0, 0, 0, 0.7), 0px 0px 0px rgba(0,0,0,0)",
+          }}
+          transition={{ type: "spring", stiffness: 600, damping: 15 }}
+          className={`w-full h-full rounded-full flex items-center justify-center overflow-hidden relative border-none outline-none ${
+            isLocked ? 'grayscale opacity-60' : 'cursor-pointer'
+          }`}
+        >
+          <motion.img 
+            animate={{ 
+              opacity: isLocked ? 0.3 : 1
+            }}
+            transition={{ duration: 0.3 }}
+            src="https://i.postimg.cc/mr7MNkX4/nown.png" 
+            alt="AI Assistant Nown" 
+            className="w-full h-full object-cover" 
+          />
+        </motion.button>
+      </div>
     </div>
   );
 }

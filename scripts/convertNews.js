@@ -56,6 +56,24 @@ function formatDateForUrl(dateStr) {
 }
 
 const workbook = XLSX.readFile(EXCEL_PATH);
+
+// Load comments if the sheet exists
+let commentsMap = {};
+if (workbook.SheetNames.includes('COMMENTS')) {
+    const commentsSheet = workbook.Sheets['COMMENTS'];
+    const commentsData = XLSX.utils.sheet_to_json(commentsSheet);
+    commentsData.forEach(row => {
+        const videoId = row.video;
+        if (videoId) {
+            if (!commentsMap[videoId]) commentsMap[videoId] = [];
+            commentsMap[videoId].push({
+                user: row.user || 'Anónimo',
+                comment: row.comment || ''
+            });
+        }
+    });
+}
+
 const sheetName = workbook.SheetNames[0];
 const worksheet = workbook.Sheets[sheetName];
 
@@ -123,6 +141,12 @@ for (let R = range.s.r + 1; R <= range.e.r; ++R) {
             item.image = `https://i.postimg.cc/SKRXS9MK/035.png`; // Default placeholder
         }
         item.readingTime = "3 min";
+        
+        // Attach comments if any
+        if (commentsMap[item.id]) {
+            item.comments = commentsMap[item.id];
+        }
+        
         news.push(item);
     }
 }
