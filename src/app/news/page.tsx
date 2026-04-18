@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useMemo, Suspense } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import Script from "next/script";
-import { ArrowLeft, Clock, Share2, Bookmark, ChevronLeft, ChevronRight, X, Search } from "lucide-react";
+import { ArrowLeft, Clock, Share2, Bookmark, ChevronLeft, ChevronRight, X, Search, Flame, Calendar, Sparkles } from "lucide-react";
 import NewsFooter from "@/components/NewsFooter";
 import { useSearchParams } from "next/navigation";
 
@@ -156,6 +156,7 @@ function NewsContent() {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
   const [tagSearch, setTagSearch] = useState("");
+  const [sortBy, setSortBy] = useState<"newest" | "visits" | "oldest">("newest");
 
   // Handle initial tag from query param
   useEffect(() => {
@@ -222,7 +223,7 @@ function NewsContent() {
   };
 
   const displayedNews = useMemo(() => {
-    return [...newsItems].reverse().filter(item => {
+    let filtered = [...newsItems].filter(item => {
       // Category filter
       let matchesCategory = true;
       if (selectedGroup !== "TODO") {
@@ -244,7 +245,18 @@ function NewsContent() {
 
       return matchesCategory && matchesTags;
     });
-  }, [selectedGroup, selectedTags]);
+
+    // Sorting logic
+    if (sortBy === "newest") {
+      filtered.sort((a, b) => b.id - a.id);
+    } else if (sortBy === "oldest") {
+      filtered.sort((a, b) => a.id - b.id);
+    } else if (sortBy === "visits") {
+      filtered.sort((a, b) => ((b as any).views || 0) - ((a as any).views || 0));
+    }
+
+    return filtered;
+  }, [selectedGroup, selectedTags, sortBy]);
 
   return (
     <main className="min-h-screen bg-background text-zinc-950 font-sans selection:bg-[#9B5DE0]/10 overflow-x-hidden">
@@ -287,9 +299,40 @@ function NewsContent() {
           </div>
         </section>
 
-        {/* ADVANCED FILTERS COMPACT TOGGLE */}
-        {/* ADVANCED FILTERS SKEUOMORPHIC SLIDER */}
-        <div className="w-full mb-8 mt-6 flex justify-end">
+        {/* SORT AND FILTERS CONTROLS */}
+        <div className="w-full mb-8 mt-6 flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-0">
+          {/* SORT SELECTOR (Left) */}
+          <div className="flex items-center gap-4 tactile-pill-niche pl-6 pr-2 py-1 select-none scale-90 origin-left">
+            <span className="tactile-etched text-[#0E0509] text-[9px] font-black tracking-widest uppercase">
+              ORDENAR POR:
+            </span>
+            <div className="flex items-center gap-1.5">
+              {[
+                { id: "newest", icon: Clock, label: "MÁS NUEVO" },
+                { id: "visits", icon: Flame, label: "MÁS VISITAS" },
+                { id: "oldest", icon: Calendar, label: "MÁS ANTIGUO" }
+              ].map((opt) => {
+                const isActive = sortBy === opt.id;
+                const Icon = opt.icon;
+                return (
+                  <motion.button
+                    key={opt.id}
+                    onClick={() => setSortBy(opt.id as any)}
+                    whileTap={{ scale: 0.94 }}
+                    className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 relative group/opt ${
+                      isActive ? "tactile-track" : "hover:bg-black/5"
+                    }`}
+                  >
+                    <Icon className={`w-4 h-4 transition-all duration-300 ${
+                      isActive ? "tactile-etched text-[#0E0509]" : "text-zinc-500 opacity-60 group-hover/opt:opacity-100"
+                    }`} />
+                  </motion.button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* ADVANCED FILTERS SKEUOMORPHIC SLIDER (Right) */}
           <div 
             onClick={() => setIsFiltersOpen(!isFiltersOpen)}
             className="group flex items-center justify-between gap-4 pl-7 pr-2 py-1.5 rounded-full tactile-pill-niche cursor-pointer select-none scale-90 origin-right outline-none"

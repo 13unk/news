@@ -25,8 +25,8 @@ export default function AIAssistant() {
             y: 0 
           }}
           whileTap={{ 
-            scale: 0.9,
-            boxShadow: "inset -12px 12px 15px rgba(0, 0, 0, 0.9), inset 6px -6px 10px rgba(0, 0, 0, 0.7), 0px 0px 0px rgba(0,0,0,0)",
+            scale: 0.98,
+            boxShadow: "inset -6px 6px 8px rgba(0, 0, 0, 0.5), inset 3px -3px 5px rgba(0, 0, 0, 0.4), 0px 0px 0px rgba(0,0,0,0)",
           }}
           transition={{ type: "spring", stiffness: 600, damping: 15 }}
           className={`w-full h-full rounded-full flex items-center justify-center overflow-hidden relative border-none outline-none ${

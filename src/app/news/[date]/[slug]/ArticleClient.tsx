@@ -12,7 +12,7 @@ const slugify = (text: string) => {
   return text
     .toString()
     .toLowerCase()
-    .replace(/<b>|<\/b>/g, '') 
+    .replace(/<b>|<\/b>/g, '')
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/[^\w\s-]/g, '')
@@ -75,7 +75,7 @@ export default function ArticleClient({ article }: { article: any }) {
   const renderTitle = (title: string) => {
     const regex = /(<b>.*?<\/b>|\n)/g;
     const parts = title.split(regex);
-    
+
     return parts.map((part, i) => {
       if (part === '\n') return <br key={i} />;
       if (part.startsWith('<b>') && part.endsWith('</b>')) {
@@ -91,7 +91,7 @@ export default function ArticleClient({ article }: { article: any }) {
       <article className="max-w-4xl mx-auto px-6 pt-12">
         <div className="flex items-center justify-between mb-12">
           <motion.div
-            whileTap={{ 
+            whileTap={{
               scale: 0.94,
               boxShadow: "inset -8px 8px 12px rgba(0, 0, 0, 0.7), inset 4px -4px 6px rgba(0, 0, 0, 0.4), 0px 0px 0px rgba(0,0,0,0)"
             }}
@@ -104,28 +104,28 @@ export default function ArticleClient({ article }: { article: any }) {
           </motion.div>
 
           <div className="flex items-center gap-6">
-            <motion.a 
-              href={article.link || "https://instagram.com/unkedition"} 
-              target="_blank" 
+            <motion.a
+              href={article.link || "https://instagram.com/unkedition"}
+              target="_blank"
               rel="noopener noreferrer"
-              whileTap={{ 
+              whileTap={{
                 scale: 0.94,
                 boxShadow: "inset -6px 6px 10px rgba(0, 0, 0, 0.7), inset 3px -3px 5px rgba(0, 0, 0, 0.4), 0px 0px 0px rgba(0,0,0,0)"
               }}
               transition={{ type: "spring", stiffness: 500, damping: 20 }}
               className="w-10 h-10 rounded-full tactile-pill-niche flex items-center justify-center p-2.5 outline-none"
             >
-               <img 
-                 src="https://i.postimg.cc/mhfHSKnp/ig-icon.png" 
-                 alt="View on Instagram" 
-                 className="w-full h-full object-contain brightness-0 grayscale transition-all opacity-40 group-hover:opacity-100"
-               />
+              <img
+                src="https://i.postimg.cc/mhfHSKnp/ig-icon.png"
+                alt="View on Instagram"
+                className="w-full h-full object-contain brightness-0 grayscale transition-all opacity-40 group-hover:opacity-100"
+              />
             </motion.a>
           </div>
         </div>
 
         {/* MAIN IMAGE ABOVE HEADLINE */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
@@ -133,13 +133,13 @@ export default function ArticleClient({ article }: { article: any }) {
         >
           {article.image === 'https://i.postimg.cc/SKRXS9MK/035.png' && article.id !== 5 ? (
             <div className="w-full h-full bg-[#D6CFE2]/20 flex items-center justify-center">
-               <div className="w-24 h-24 opacity-5 brightness-0 grayscale">
-                 <img src="https://i.postimg.cc/qMjGMbsj/circus2.png" alt="" className="w-full h-full object-contain" />
-               </div>
+              <div className="w-24 h-24 opacity-5 brightness-0 grayscale">
+                <img src="https://i.postimg.cc/qMjGMbsj/circus2.png" alt="" className="w-full h-full object-contain" />
+              </div>
             </div>
           ) : (
-            <img 
-              src={article.image || "https://i.postimg.cc/SKRXS9MK/035.png"} 
+            <img
+              src={article.image || "https://i.postimg.cc/SKRXS9MK/035.png"}
               alt={article.title.replace(/<b>|<\/b>/g, '')}
               className="w-full h-full object-cover transition-all duration-700 grayscale-0"
             />
@@ -147,7 +147,7 @@ export default function ArticleClient({ article }: { article: any }) {
         </motion.div>
 
         {/* HEADLINE */}
-        <motion.header 
+        <motion.header
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
@@ -164,25 +164,25 @@ export default function ArticleClient({ article }: { article: any }) {
         </motion.header>
 
         {/* METADATA */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
           className="flex items-center justify-between py-6 border-y border-black/5 mb-16"
         >
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full tactile-pill-niche overflow-hidden p-1 flex items-center justify-center">
+            <div className="w-8 h-8">
                <img 
                  src={CATEGORY_GROUPS.find(g => g.categories.includes(article.category || ""))?.img || CATEGORY_GROUPS[2].img} 
                  alt="Category" 
-                 className="w-full h-full object-contain opacity-40" 
+                 className="w-full h-full object-contain" 
                />
             </div>
             <div>
               <p className="text-[10px] font-black tracking-widest uppercase text-zinc-900">
                 {CATEGORY_GROUPS.find(g => g.categories.includes(article.category || ""))?.label || article.category}
               </p>
-              <p className="text-[10px] font-bold tracking-widest uppercase text-zinc-400">
+              <p className="text-[10px] font-black tracking-widest uppercase text-[#6D467B]">
                 {article.date.split(' ').slice(0, 2).join(' ')}
               </p>
             </div>
@@ -201,7 +201,7 @@ export default function ArticleClient({ article }: { article: any }) {
 
 
         <div className="prose prose-zinc max-w-none">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
@@ -213,23 +213,23 @@ export default function ArticleClient({ article }: { article: any }) {
           </motion.div>
 
           {igId && (
-            <motion.div 
-              key={igId} 
+            <motion.div
+              key={igId}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
               className="mt-20 flex flex-col items-center w-full"
             >
               <div className="w-full max-w-[400px] md:max-w-[500px] rounded-xl overflow-hidden shadow-[20px_20px_40px_rgba(0,0,0,0.08)] border border-black/5 bg-[#CFC9BD] p-2">
-                <blockquote 
-                  className="instagram-media" 
+                <blockquote
+                  className="instagram-media"
                   data-instgrm-permalink={`https://www.instagram.com/reel/${igId}/?utm_source=ig_embed&amp;utm_campaign=loading`}
                   data-instgrm-version="14"
                   style={{ width: '100%', margin: '0', padding: '0', border: '0' }}
                 >
                 </blockquote>
               </div>
-              
+
               {/* Featured Comments Section */}
               {article.comments && article.comments.length > 0 && (
                 <div className="w-full mt-4 mb-2 overflow-hidden">
@@ -237,9 +237,9 @@ export default function ArticleClient({ article }: { article: any }) {
                     <AnimatePresence mode="wait">
                       {article.comments.map((c: any, i: number) => {
                         if (i !== activeCommentIndex) return null;
-                        
+
                         return (
-                          <motion.div 
+                          <motion.div
                             key={i}
                             initial={{ opacity: 0, x: 40 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -272,34 +272,34 @@ export default function ArticleClient({ article }: { article: any }) {
         </div>
 
         <div className="mt-4 pt-6 border-t border-black/5 flex flex-wrap justify-end items-center gap-3">
-           {article.tags && article.tags.split(',').map((tag: string, idx: number) => {
-             const tagText = tag.trim().toUpperCase();
-             return (
-               <motion.div
-                 key={idx}
-                 whileTap={{ 
-                   scale: 0.94,
-                   boxShadow: "inset -6px 6px 10px rgba(0, 0, 0, 0.7), inset 3px -3px 5px rgba(0, 0, 0, 0.4), 0px 0px 0px rgba(0,0,0,0)"
-                 }}
-                 transition={{ type: "spring", stiffness: 500, damping: 20 }}
-                 className="rounded-full tactile-pill-niche"
-               >
-                 <Link 
-                   href={`/news?tag=${encodeURIComponent(tagText)}`}
-                   className="px-4 py-2 flex items-center justify-center rounded-full text-[9px] font-black tracking-[0.2em] uppercase text-zinc-600 cursor-pointer outline-none"
-                 >
-                   {tagText}
-                 </Link>
-               </motion.div>
-             );
-           })}
+          {article.tags && article.tags.split(',').map((tag: string, idx: number) => {
+            const tagText = tag.trim().toUpperCase();
+            return (
+              <motion.div
+                key={idx}
+                whileTap={{
+                  scale: 0.94,
+                  boxShadow: "inset -6px 6px 10px rgba(0, 0, 0, 0.7), inset 3px -3px 5px rgba(0, 0, 0, 0.4), 0px 0px 0px rgba(0,0,0,0)"
+                }}
+                transition={{ type: "spring", stiffness: 500, damping: 20 }}
+                className="rounded-full tactile-pill-niche"
+              >
+                <Link
+                  href={`/news?tag=${encodeURIComponent(tagText)}`}
+                  className="px-4 py-2 flex items-center justify-center rounded-full text-[9px] font-black tracking-[0.2em] uppercase text-zinc-600 cursor-pointer outline-none"
+                >
+                  {tagText}
+                </Link>
+              </motion.div>
+            );
+          })}
         </div>
       </article>
-      
+
       <NewsFooter />
 
-      <Script 
-        src="https://platform.instagram.com/en_US/embeds.js" 
+      <Script
+        src="https://platform.instagram.com/en_US/embeds.js"
         strategy="afterInteractive"
       />
     </main>
