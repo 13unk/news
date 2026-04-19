@@ -4,6 +4,7 @@
 :root {
   --background: #CFC9BD;
   --foreground: #111111;
+  --card-background: #CFC9BD;
 }
 
 @theme inline {
@@ -127,10 +128,10 @@ body {
 
 .tactile-niche {
   /* Fondo base del chasis */
-  background-color: var(--background);
+  background-color: var(--card-background);
   border-radius: 28px;
   /* Biselado de RECORTE DE PAPEL (Inward Bevel) */
-  box-shadow: 
+  box-shadow:
     /* 1. PERFILADO INTERNO AFILADO (USAMOS SPREAD PARA SEGUIR EL BORDER-RADIUS) */
     inset -2px 2px 0px 6px rgba(0, 0, 0, 0.2),
     /* 2. EL INICIO DE LA CURVA */
@@ -183,7 +184,7 @@ body {
 }
 
 .tactile-pill-niche {
-  background-color: var(--background);
+  background-color: var(--card-background);
   border-radius: 9999px;
   box-shadow:
     inset 12px 12px 30px rgba(0, 0, 0, 0.3),
