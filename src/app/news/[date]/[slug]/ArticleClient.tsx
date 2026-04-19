@@ -110,10 +110,10 @@ export default function ArticleClient({ article }: { article: any }) {
               rel="noopener noreferrer"
               whileTap={{
                 scale: 0.94,
-                boxShadow: "inset -6px 6px 10px rgba(0, 0, 0, 0.7), inset 3px -3px 5px rgba(0, 0, 0, 0.4), 0px 0px 0px rgba(0,0,0,0)"
+                boxShadow: "inset -8px 8px 12px rgba(0, 0, 0, 0.7), inset 4px -4px 6px rgba(0, 0, 0, 0.4), 0px 0px 0px rgba(0,0,0,0)"
               }}
               transition={{ type: "spring", stiffness: 500, damping: 20 }}
-              className="w-10 h-10 rounded-full tactile-pill-niche flex items-center justify-center p-2.5 outline-none"
+              className="w-12 h-12 rounded-full tactile-pill-niche flex items-center justify-center p-3 outline-none"
             >
               <img
                 src="https://i.postimg.cc/mhfHSKnp/ig-icon.png"
@@ -172,11 +172,11 @@ export default function ArticleClient({ article }: { article: any }) {
         >
           <div className="flex items-center gap-4">
             <div className="w-8 h-8">
-               <img 
-                 src={CATEGORY_GROUPS.find(g => g.categories.includes(article.category || ""))?.img || CATEGORY_GROUPS[2].img} 
-                 alt="Category" 
-                 className="w-full h-full object-contain" 
-               />
+              <img
+                src={CATEGORY_GROUPS.find(g => g.categories.includes(article.category || ""))?.img || CATEGORY_GROUPS[2].img}
+                alt="Category"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <p className="text-[10px] font-black tracking-widest uppercase text-zinc-900">
