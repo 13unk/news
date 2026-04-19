@@ -113,7 +113,7 @@ export default function ArticleClient({ article }: { article: any }) {
                 boxShadow: "inset -8px 8px 12px rgba(0, 0, 0, 0.7), inset 4px -4px 6px rgba(0, 0, 0, 0.4), 0px 0px 0px rgba(0,0,0,0)"
               }}
               transition={{ type: "spring", stiffness: 500, damping: 20 }}
-              className="w-12 h-12 rounded-full tactile-pill-niche flex items-center justify-center p-3 outline-none"
+              className="w-14 h-14 rounded-full tactile-pill-niche flex items-center justify-center p-2.5 outline-none"
             >
               <img
                 src="https://i.postimg.cc/mhfHSKnp/ig-icon.png"
