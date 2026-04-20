@@ -5459,7 +5459,7 @@
     "category": "FÚTBOL",
     "tags": "videojuegos, fifa",
     "title": "En el <b>FIFA 2000</b> te podía partir un <b>rayo</b> o abducir un <b>ovni</b>",
-    "views": 1100000,
+    "views": 1200000,
     "link": "https://www.instagram.com/reel/DXFJVQOk8SX/",
     "image": "https://i.postimg.cc/Pq112XYp/483.png",
     "body": [
@@ -5480,7 +5480,7 @@
     "category": "FÚTBOL",
     "tags": "argentina, boca juniors, libertadores",
     "title": "No pudo evitar la <b>tentación</b> y se clavó una <b>paja</b> en pleno <b>partido</b>",
-    "views": 5700000,
+    "views": 6100000,
     "link": "https://www.instagram.com/reel/DXJgcRME7Cz/",
     "image": "https://i.postimg.cc/1zDDJmwN/492.png",
     "body": [
@@ -5501,7 +5501,7 @@
     "category": "FÚTBOL",
     "tags": "mallorca, laliga, jan virgili",
     "title": "Gol de <b>Jan Virgili</b> con los <b>dos pies</b> a la vez",
-    "views": 498000,
+    "views": 625000,
     "link": "https://www.instagram.com/reel/DXKMHZmk-8g/",
     "image": "https://i.postimg.cc/zDTMMbWW/494.png",
     "body": [
@@ -5522,7 +5522,7 @@
     "category": "FÚTBOL",
     "tags": "bellingham, real madrid, champions, bayern",
     "title": "<b>Bellingham</b> agrede a su <b>compañero</b> de equipo tras <b>perder</b> 4-3",
-    "views": 978000,
+    "views": 982000,
     "link": "https://www.instagram.com/reel/DXMXmQPkyqj/",
     "image": "https://i.postimg.cc/htGbkgSZ/497.png",
     "body": [
@@ -5543,7 +5543,7 @@
     "category": "FÚTBOL",
     "tags": "conmebol, brasil, argentina, bolivia",
     "title": "<b>2 tarjetas amarillas</b> en la misma jugada, <b>tarjeta roja</b>",
-    "views": 114000,
+    "views": 128000,
     "link": "https://www.instagram.com/reel/DXPpIl8E3Bn/",
     "image": "https://i.postimg.cc/Y07LYNPv/502.png",
     "body": [
@@ -5564,7 +5564,7 @@
     "category": "FÚTBOL",
     "tags": "primera rfef, real murcia, pedro benito",
     "title": "El <b>césped</b> despeja un <b>gol</b> que estaba casi <b>asegurado</b>",
-    "views": 121000,
+    "views": 136000,
     "link": "https://www.instagram.com/reel/DXRGrC5E2p3/",
     "image": "https://i.postimg.cc/7h4J01RC/503.png",
     "body": [
@@ -5605,7 +5605,7 @@
     "category": "FÚTBOL",
     "tags": "copa del rey, atleti, cholo simeone, real sociedad",
     "title": "13 años persiguiendo una <b>final</b> de <b>copa</b> para que te marquen a los <b>14 segundos</b>",
-    "views": 215000,
+    "views": 445000,
     "link": "https://www.instagram.com/reel/DXTxWhmk9Ok/",
     "image": "https://i.postimg.cc/MKsp1sW6/506.png",
     "body": [
@@ -5627,7 +5627,7 @@
     "tags": "copa del rey, atleti, real sociedad, oyarzabal",
     "title": "<b>Oyarzabal</b> potando el <b>ron negrita</b> para reactivarse",
     "subtitle": "Cositas de Bellingham",
-    "views": 271000,
+    "views": 441000,
     "link": "https://www.instagram.com/reel/DXT6fJ1E5L5/",
     "image": "https://i.postimg.cc/MKsp1sWZ/507.png",
     "body": [
@@ -5637,6 +5637,27 @@
     ],
     "slug": "oyarzabal-potando-el-ron-negrita-para-reactivarse",
     "dateUrl": "2026-04-19",
+    "description": "",
+    "readingTime": "3 min"
+  },
+  {
+    "id": 284,
+    "order": 508,
+    "date": "19 ABR 2026",
+    "category": "FÚTBOL",
+    "tags": "copa del rey, atleti, real sociedad, rtve",
+    "title": "<b>RTVE</b> tenía preparado el <b>cartel</b> del <b>Atleti</b> ganando la <b>copa</b>",
+    "views": 245000,
+    "link": "https://www.instagram.com/reel/DXUAoP0E5eL/",
+    "image": "https://i.postimg.cc/MKtJbB5Y/508.png",
+    "body": [
+      "En la retransmisión de La1 de Radio Televisión Española de la final de la Copa del Rey, ocurrió un percance.",
+      "Una vez acabado el partido y con la victoria de la Real Sociedad frente al Atlético de Madrid, conectaron con el reportero que se encontraba en San Sebastián para cubrir la celebración de los aficionados de la Real.",
+      "Pero intervino la mala pata y el cartelito que mostraron fue describiendo la celebración del Atleti, ya que por lo visto ese era el grafismo que tenían preparado para el final del partido."
+    ],
+    "slug": "rtve-tenia-preparado-el-cartel-del-atleti-ganando-la-copa",
+    "dateUrl": "2026-04-19",
+    "subtitle": "",
     "description": "",
     "readingTime": "3 min"
   }
