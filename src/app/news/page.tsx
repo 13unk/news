@@ -96,7 +96,7 @@ const renderTitle = (title: string) => {
     if (part === '\n') return <br key={i} />;
     if (part.startsWith('<b>') && part.endsWith('</b>')) {
       const content = part.substring(3, part.length - 4);
-      return <span key={i} className="text-[#6A4378]">{content}</span>;
+      return <span key={i} className="text-[#5e3e6a]">{content}</span>;
     }
     return part;
   });
@@ -259,7 +259,7 @@ function NewsContent() {
   }, [selectedGroup, selectedTags, sortBy]);
 
   return (
-    <main className="min-h-screen bg-background text-zinc-950 font-sans selection:bg-[#9B5DE0]/10 overflow-x-hidden">
+    <main className="min-h-screen bg-background text-zinc-950 font-sans selection:bg-[#5e3e6a]/10 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-6 pb-20">
         {/* CATEGORY SELECTOR */}
         <section className="mb-12">
@@ -443,11 +443,11 @@ function NewsContent() {
                               : "opacity-60 grayscale"
                           }`}
                         >
-                          <span className={`text-[9px] font-bold tracking-tight uppercase leading-tight tactile-etched ${isActive ? 'text-[#6A4378]' : 'text-[#0E0509]'}`}>
+                          <span className={`text-[9px] font-bold tracking-tight uppercase leading-tight tactile-etched ${isActive ? 'text-[#5e3e6a]' : 'text-[#0E0509]'}`}>
                             {tag.name}
                           </span>
                           {isActive && (
-                            <div className="absolute top-1.5 right-1.5 w-1 h-1 rounded-full bg-[#6A4378] shadow-[0_0_8px_rgba(106,67,120,0.4)]" />
+                            <div className="absolute top-1.5 right-1.5 w-1 h-1 rounded-full bg-[#5e3e6a] shadow-[0_0_8px_rgba(94,62,106,0.4)]" />
                           )}
                         </motion.button>
                       );

@@ -80,14 +80,14 @@ export default function ArticleClient({ article }: { article: any }) {
       if (part === '\n') return <br key={i} />;
       if (part.startsWith('<b>') && part.endsWith('</b>')) {
         const content = part.substring(3, part.length - 4);
-        return <span key={i} className="text-[#9B5DE0]">{content}</span>;
+        return <span key={i} className="text-[#5e3e6a]">{content}</span>;
       }
       return part;
     });
   };
 
   return (
-    <main className="min-h-screen bg-background text-zinc-950 font-sans selection:bg-[#9B5DE0]/10 overflow-x-hidden pb-20">
+    <main className="min-h-screen bg-background text-zinc-950 font-sans selection:bg-[#5e3e6a]/10 overflow-x-hidden pb-20">
       <article className="max-w-4xl mx-auto px-6 pt-12">
         <div className="flex items-center justify-between mb-12">
           <motion.div
@@ -157,7 +157,7 @@ export default function ArticleClient({ article }: { article: any }) {
             {renderTitle(article.title)}
           </h1>
           {article.subtitle && (
-            <p className="text-[#6D467B] text-sm md:text-base font-black uppercase tracking-widest mb-8 drop-shadow-[1px_1px_0px_rgba(0,0,0,0.1)]">
+            <p className="text-[#5e3e6a] text-sm md:text-base font-black uppercase tracking-widest mb-8 drop-shadow-[1px_1px_0px_rgba(0,0,0,0.1)]">
               {article.subtitle}
             </p>
           )}
@@ -182,17 +182,17 @@ export default function ArticleClient({ article }: { article: any }) {
               <p className="text-[10px] font-black tracking-widest uppercase text-zinc-900">
                 {CATEGORY_GROUPS.find(g => g.categories.includes(article.category || ""))?.label || article.category}
               </p>
-              <p className="text-[10px] font-black tracking-widest uppercase text-[#6D467B]">
+              <p className="text-[10px] font-black tracking-widest uppercase text-[#5e3e6a]">
                 {article.date.split(' ').slice(0, 2).join(' ')}
               </p>
             </div>
           </div>
 
           <div className="flex items-center gap-2 px-4 py-2 rounded-2xl tactile-pill-niche">
-            <span className="text-sm font-black text-[#6D467B] tracking-tight">
+            <span className="text-sm font-black text-[#5e3e6a] tracking-tight">
               {formatViews(article.views)}
             </span>
-            <svg className="w-4 h-4 text-[#6D467B]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="w-4 h-4 text-[#5e3e6a]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0z" />
               <circle cx="12" cy="12" r="3" />
             </svg>
@@ -247,7 +247,7 @@ export default function ArticleClient({ article }: { article: any }) {
                             transition={{ duration: 0.5, ease: "easeInOut" }}
                             className="absolute inset-0 flex items-center gap-4 justify-center"
                           >
-                            <div className="shrink-0 w-10 h-10 rounded-full bg-[#6D467B] flex items-center justify-center shadow-lg border-2 border-white">
+                            <div className="shrink-0 w-10 h-10 rounded-full bg-[#5e3e6a] flex items-center justify-center shadow-lg border-2 border-white">
                               <User className="w-5 h-5 text-white" />
                             </div>
                             <div className="flex flex-col items-start text-left max-w-[80%]">

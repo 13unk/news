@@ -31,7 +31,7 @@ function NavButton({ label }: { label: string }) {
         className={`px-5 py-2 md:px-7 md:py-3 rounded-full text-[0.65rem] md:text-[0.7rem] font-bold uppercase tracking-[0.2em] outline-none border-none transition-all duration-300 ${
           isLocked ? 'grayscale opacity-60' : 'cursor-pointer'
         }`}
-        style={{ backgroundColor: '#6D467B' }}
+        style={{ backgroundColor: '#5e3e6a' }}
       >
         <span className="tactile-etched" style={{ color: '#CFC9BD' }}>{label}</span>
       </motion.button>
@@ -57,7 +57,7 @@ export default function NewsNav() {
                 }}
                 transition={{ type: "spring", stiffness: 600, damping: 20 }}
                 className="px-5 py-2 md:px-7 md:py-3 rounded-full flex items-center justify-center cursor-pointer"
-                style={{ backgroundColor: '#6D467B' }}
+                style={{ backgroundColor: '#5e3e6a' }}
               >
                 <span className="tactile-etched text-[0.65rem] md:text-[0.7rem] font-black uppercase tracking-[0.2em] whitespace-nowrap" style={{ color: '#CFC9BD' }}>
                     PRENSA
@@ -78,7 +78,7 @@ export default function NewsNav() {
                 }}
                 transition={{ type: "spring", stiffness: 600, damping: 20 }}
                 className="px-6 py-2 md:px-10 md:py-4 rounded-full flex items-center justify-center cursor-pointer"
-                style={{ backgroundColor: '#6D467B' }}
+                style={{ backgroundColor: '#5e3e6a' }}
               >
                 <span className="tactile-etched text-[0.7rem] md:text-[0.85rem] font-bold uppercase tracking-[0.3em] whitespace-nowrap" style={{ color: '#CFC9BD' }}>
                   HOME OF THE UNKLASSIFIABLE

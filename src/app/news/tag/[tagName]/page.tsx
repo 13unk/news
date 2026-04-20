@@ -41,7 +41,7 @@ const renderTitle = (title: string) => {
     if (part === '\n') return <br key={i} />;
     if (part.startsWith('<b>') && part.endsWith('</b>')) {
       const content = part.substring(3, part.length - 4);
-      return <span key={i} className="text-[#6A4378]">{content}</span>;
+      return <span key={i} className="text-[#5e3e6a]">{content}</span>;
     }
     return part;
   });
@@ -104,9 +104,9 @@ export default function TagPage() {
   };
 
   return (
-    <main className="min-h-screen bg-background text-zinc-950 font-sans selection:bg-[#9B5DE0]/10 overflow-x-hidden">
+    <main className="min-h-screen bg-background text-zinc-950 font-sans selection:bg-[#5e3e6a]/10 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-6 pb-20">
-        <Link href="/" className="flex items-center gap-2 text-[10px] font-black tracking-widest uppercase text-zinc-400 hover:text-[#9B5DE0] transition-colors group/back mb-16">
+        <Link href="/" className="flex items-center gap-2 text-[10px] font-black tracking-widest uppercase text-zinc-400 hover:text-[#5e3e6a] transition-colors group/back mb-16">
           <ArrowLeft className="w-3 h-3 group-hover:-translate-x-1 transition-transform" />
           VOLVER
         </Link>
@@ -199,7 +199,7 @@ export default function TagPage() {
 
                 {/* NEOMORPHIC SEARCH BAR */}
                 <div className="relative mb-8 group">
-                  <div className="absolute left-5 top-1/2 -translate-y-1/2 text-zinc-400 group-focus-within:text-[#9B5DE0] transition-colors">
+                  <div className="absolute left-5 top-1/2 -translate-y-1/2 text-zinc-400 group-focus-within:text-[#5e3e6a] transition-colors">
                     <Search className="w-4 h-4" />
                   </div>
                   <input 
@@ -226,7 +226,7 @@ export default function TagPage() {
                           onClick={() => handleTagClick(tag)}
                           className={`px-3 py-1.5 rounded-full carved text-[8px] md:text-[9px] font-black tracking-[0.15em] uppercase transition-all flex items-center justify-center ${
                             isActive 
-                              ? "text-[#9B5DE0] scale-105 border-2 border-[#9B5DE0] shadow-[0_0_15px_rgba(155,93,224,0.15)]" 
+                              ? "text-[#5e3e6a] scale-105 border-2 border-[#5e3e6a] shadow-[0_0_15px_rgba(94,62,106,0.15)]" 
                               : "text-zinc-500 opacity-60 hover:opacity-100 hover:scale-105 border-2 border-transparent"
                           }`}
                         >
