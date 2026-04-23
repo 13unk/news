@@ -50,7 +50,7 @@ export default function NewsFooter() {
               <button 
                 key={dev.name} 
                 onClick={() => setSelectedDev(dev)}
-                className="text-zinc-400 text-[11px] sm:text-[12px] font-black tracking-[0.3em] uppercase transition-colors hover:text-black whitespace-nowrap outline-none"
+                className="text-zinc-400 text-[10px] sm:text-[11px] font-black tracking-[0.3em] uppercase transition-colors hover:text-black whitespace-nowrap outline-none"
               >
                 {dev.name}
               </button>
@@ -113,7 +113,7 @@ export default function NewsFooter() {
                       visible: { opacity: 1, y: 0 }
                     }}
                   >
-                    <h2 className="text-6xl md:text-8xl font-black tracking-tighter uppercase text-[#0E0509] leading-none mb-4">
+                    <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase text-[#0E0509] leading-none mb-4">
                       {selectedDev.name}
                     </h2>
                   </motion.div>
