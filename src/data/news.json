@@ -5480,7 +5480,7 @@
     "category": "FÚTBOL",
     "tags": "argentina, boca juniors, libertadores",
     "title": "No pudo evitar la <b>tentación</b> y se clavó una <b>paja</b> en pleno <b>partido</b>",
-    "views": 6100000,
+    "views": 7000000,
     "link": "https://www.instagram.com/reel/DXJgcRME7Cz/",
     "image": "https://i.postimg.cc/1zDDJmwN/492.png",
     "body": [
@@ -5501,7 +5501,7 @@
     "category": "FÚTBOL",
     "tags": "mallorca, laliga, jan virgili",
     "title": "Gol de <b>Jan Virgili</b> con los <b>dos pies</b> a la vez",
-    "views": 625000,
+    "views": 917000,
     "link": "https://www.instagram.com/reel/DXKMHZmk-8g/",
     "image": "https://i.postimg.cc/zDTMMbWW/494.png",
     "body": [
@@ -5522,7 +5522,7 @@
     "category": "FÚTBOL",
     "tags": "bellingham, real madrid, champions, bayern",
     "title": "<b>Bellingham</b> agrede a su <b>compañero</b> de equipo tras <b>perder</b> 4-3",
-    "views": 982000,
+    "views": 997000,
     "link": "https://www.instagram.com/reel/DXMXmQPkyqj/",
     "image": "https://i.postimg.cc/htGbkgSZ/497.png",
     "body": [
@@ -5538,12 +5538,32 @@
   },
   {
     "id": 279,
+    "order": 501,
+    "date": "17 ABR 2026",
+    "category": "FÚTBOL",
+    "tags": "chiringuito, brad pitt, juanma rodríguez",
+    "title": "Para cuando te hablen de <b>injusticias</b> en el <b>fútbol</b>",
+    "views": 87000,
+    "link": "https://www.instagram.com/reel/DXPXiLKDPtM/",
+    "image": "https://i.postimg.cc/kgVpv5G5/501.png",
+    "body": [
+      "Hablando sobre el partido de Bayern de Múnich - Real Madrid de Champions en el programa de radio El Primer Palo, el reconocido periodista Juanma Rodríguez tuvo que dar su opinión.",
+      "El también tertuliano de El Chiringuito de Jugones dio su opinión sobre el concepto de argumentar de justicia o injusticia en el fútbol extrapolándolo a una temática más cruda y real."
+    ],
+    "slug": "para-cuando-te-hablen-de-injusticias-en-el-futbol",
+    "dateUrl": "2026-04-17",
+    "subtitle": "",
+    "description": "",
+    "readingTime": "3 min"
+  },
+  {
+    "id": 280,
     "order": 502,
     "date": "17 ABR 2026",
     "category": "FÚTBOL",
     "tags": "conmebol, brasil, argentina, bolivia",
     "title": "<b>2 tarjetas amarillas</b> en la misma jugada, <b>tarjeta roja</b>",
-    "views": 128000,
+    "views": 188000,
     "link": "https://www.instagram.com/reel/DXPpIl8E3Bn/",
     "image": "https://i.postimg.cc/Y07LYNPv/502.png",
     "body": [
@@ -5558,13 +5578,13 @@
     "readingTime": "3 min"
   },
   {
-    "id": 280,
+    "id": 281,
     "order": 503,
     "date": "17 ABR 2026",
     "category": "FÚTBOL",
     "tags": "primera rfef, real murcia, pedro benito",
     "title": "El <b>césped</b> despeja un <b>gol</b> que estaba casi <b>asegurado</b>",
-    "views": 136000,
+    "views": 174000,
     "link": "https://www.instagram.com/reel/DXRGrC5E2p3/",
     "image": "https://i.postimg.cc/7h4J01RC/503.png",
     "body": [
@@ -5579,12 +5599,12 @@
     "readingTime": "3 min"
   },
   {
-    "id": 281,
+    "id": 282,
     "order": 505,
     "date": "18 ABR 2026",
     "category": "FÚTBOL",
     "title": "Lo que haga falta para que <b>atiendan</b> a su <b>compañero</b>",
-    "views": 2300000,
+    "views": 2400000,
     "link": "https://www.instagram.com/reel/DXR-2q1E8Ox/",
     "image": "https://i.postimg.cc/6qK4nVPy/505.png",
     "body": [
@@ -5599,13 +5619,13 @@
     "readingTime": "3 min"
   },
   {
-    "id": 282,
+    "id": 283,
     "order": 506,
     "date": "19 ABR 2026",
     "category": "FÚTBOL",
     "tags": "copa del rey, atleti, cholo simeone, real sociedad",
     "title": "13 años persiguiendo una <b>final</b> de <b>copa</b> para que te marquen a los <b>14 segundos</b>",
-    "views": 445000,
+    "views": 593000,
     "link": "https://www.instagram.com/reel/DXTxWhmk9Ok/",
     "image": "https://i.postimg.cc/MKsp1sW6/506.png",
     "body": [
@@ -5620,14 +5640,14 @@
     "readingTime": "3 min"
   },
   {
-    "id": 283,
+    "id": 284,
     "order": 507,
     "date": "19 ABR 2026",
     "category": "FÚTBOL",
     "tags": "copa del rey, atleti, real sociedad, oyarzabal",
     "title": "<b>Oyarzabal</b> potando el <b>ron negrita</b> para reactivarse",
     "subtitle": "Cositas de Bellingham",
-    "views": 441000,
+    "views": 530000,
     "link": "https://www.instagram.com/reel/DXT6fJ1E5L5/",
     "image": "https://i.postimg.cc/MKsp1sWZ/507.png",
     "body": [
@@ -5637,27 +5657,6 @@
     ],
     "slug": "oyarzabal-potando-el-ron-negrita-para-reactivarse",
     "dateUrl": "2026-04-19",
-    "description": "",
-    "readingTime": "3 min"
-  },
-  {
-    "id": 284,
-    "order": 508,
-    "date": "19 ABR 2026",
-    "category": "FÚTBOL",
-    "tags": "copa del rey, atleti, real sociedad, rtve",
-    "title": "<b>RTVE</b> tenía preparado el <b>cartel</b> del <b>Atleti</b> ganando la <b>copa</b>",
-    "views": 245000,
-    "link": "https://www.instagram.com/reel/DXUAoP0E5eL/",
-    "image": "https://i.postimg.cc/MKtJbB5Y/508.png",
-    "body": [
-      "En la retransmisión de La1 de Radio Televisión Española de la final de la Copa del Rey, ocurrió un percance.",
-      "Una vez acabado el partido y con la victoria de la Real Sociedad frente al Atlético de Madrid, conectaron con el reportero que se encontraba en San Sebastián para cubrir la celebración de los aficionados de la Real.",
-      "Pero intervino la mala pata y el cartelito que mostraron fue describiendo la celebración del Atleti, ya que por lo visto ese era el grafismo que tenían preparado para el final del partido."
-    ],
-    "slug": "rtve-tenia-preparado-el-cartel-del-atleti-ganando-la-copa",
-    "dateUrl": "2026-04-19",
-    "subtitle": "",
     "description": "",
     "readingTime": "3 min"
   }
