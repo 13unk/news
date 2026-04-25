@@ -8,12 +8,12 @@ import styles from "../Home.module.css";
 import { useCart } from "@/context/CartContext";
 
 const products = [
-  { id: 1, name: "ITEM 1", price: "$450.00", image: "https://i.postimg.cc/bwqKCr11/project6.png", rotation: "rotate-1" },
-  { id: 2, name: "ITEM 2", price: "$120.00", image: "https://i.postimg.cc/bwqKCr11/project6.png", rotation: "-rotate-2" },
-  { id: 3, name: "ITEM 3", price: "$890.00", image: "https://i.postimg.cc/bwqKCr11/project6.png", rotation: "rotate-2" },
-  { id: 4, name: "ITEM 4", price: "$300.00", image: "https://i.postimg.cc/bwqKCr11/project6.png", rotation: "-rotate-1" },
-  { id: 5, name: "ITEM 5", price: "$50.00", image: "https://i.postimg.cc/bwqKCr11/project6.png", rotation: "rotate-3" },
-  { id: 6, name: "ITEM 6", price: "$25.00", image: "https://i.postimg.cc/bwqKCr11/project6.png", rotation: "-rotate-3" },
+  { id: 1, name: "ITEM 1", price: "9.99€", image: "https://i.postimg.cc/bwqKCr11/project6.png", rotation: "rotate-1" },
+  { id: 2, name: "ITEM 2", price: "9.99€", image: "https://i.postimg.cc/bwqKCr11/project6.png", rotation: "-rotate-2" },
+  { id: 3, name: "ITEM 3", price: "9.99€", image: "https://i.postimg.cc/bwqKCr11/project6.png", rotation: "rotate-2" },
+  { id: 4, name: "ITEM 4", price: "9.99€", image: "https://i.postimg.cc/bwqKCr11/project6.png", rotation: "-rotate-1" },
+  { id: 5, name: "ITEM 5", price: "9.99€", image: "https://i.postimg.cc/bwqKCr11/project6.png", rotation: "rotate-3" },
+  { id: 6, name: "ITEM 6", price: "9.99€", image: "https://i.postimg.cc/bwqKCr11/project6.png", rotation: "-rotate-3" },
 ];
 
 export default function BotinPage() {

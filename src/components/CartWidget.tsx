@@ -14,7 +14,7 @@ export default function CartWidget() {
   if (pathname !== '/botin') return null;
 
   const totalPrice = cartItems.reduce((acc, item) => {
-    const price = parseFloat(item.price.replace('$', ''));
+    const price = parseFloat(item.price.replace(/[^\d.]/g, ''));
     return acc + (price * item.quantity);
   }, 0);
 
@@ -73,7 +73,7 @@ export default function CartWidget() {
                     
                     {/* Total Price */}
                     <div className="text-[0.7rem] font-mono font-bold text-[#cfc9bd] border-t border-white/20 w-3/4 text-center pt-2 mt-1 shrink-0">
-                      ${totalPrice.toFixed(2)}
+                      {totalPrice.toFixed(2)}€
                     </div>
                   </div>
                 </motion.div>
