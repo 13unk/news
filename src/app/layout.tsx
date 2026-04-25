@@ -30,6 +30,9 @@ export const metadata: Metadata = {
   description: "Menace: Unknown - Global Dispatch",
 };
 
+import { CartProvider } from "@/context/CartContext";
+import CartWidget from "@/components/CartWidget";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -40,8 +43,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${archivo.variable} antialiased selection:bg-emerald-500/30`}
       >
-        {children}
-        <AIAssistant />
+        <CartProvider>
+          {children}
+          <AIAssistant />
+          <CartWidget />
+        </CartProvider>
       </body>
     </html>
   );

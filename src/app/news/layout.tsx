@@ -7,7 +7,7 @@ export default function NewsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen bg-[var(--background)] text-[#1b1b1b] font-sans">
       <NewsHeader />
       <div className="pt-24 md:pt-48">
         <NewsNav />
