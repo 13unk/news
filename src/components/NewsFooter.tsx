@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowUpRight } from "lucide-react";
 
-type Developer = {
+export type Developer = {
   name: string;
   url: string;
   description?: string;
@@ -34,8 +34,23 @@ const DEVELOPERS: Developer[] = [
   }
 ];
 
-export default function NewsFooter() {
-  const [selectedDev, setSelectedDev] = useState<Developer | null>(null);
+interface NewsFooterProps {
+  externalSelectedDev?: Developer | null;
+  onDevClick?: (dev: Developer | null) => void;
+}
+
+export default function NewsFooter({ externalSelectedDev, onDevClick }: NewsFooterProps) {
+  const [internalSelectedDev, setInternalSelectedDev] = useState<Developer | null>(null);
+
+  const selectedDev = externalSelectedDev !== undefined ? externalSelectedDev : internalSelectedDev;
+  
+  const handleDevClick = (dev: Developer | null) => {
+    if (onDevClick) {
+      onDevClick(dev);
+    } else {
+      setInternalSelectedDev(dev);
+    }
+  };
 
   return (
     <>
@@ -49,7 +64,7 @@ export default function NewsFooter() {
             {DEVELOPERS.map(dev => (
               <button 
                 key={dev.name} 
-                onClick={() => setSelectedDev(dev)}
+                onClick={() => handleDevClick(dev)}
                 className="text-zinc-400 text-[10px] sm:text-[11px] font-black tracking-[0.3em] uppercase transition-colors hover:text-black whitespace-nowrap outline-none"
               >
                 {dev.name}
@@ -68,7 +83,7 @@ export default function NewsFooter() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              onClick={() => setSelectedDev(null)}
+              onClick={() => handleDevClick(null)}
               className="fixed inset-0 z-[999] bg-black/20 backdrop-blur-[2px]"
             />
             
@@ -122,7 +137,7 @@ export default function NewsFooter() {
                       hidden: { opacity: 0, scale: 0.8 },
                       visible: { opacity: 1, scale: 1 }
                     }}
-                    onClick={() => setSelectedDev(null)}
+                    onClick={() => handleDevClick(null)}
                     className="w-10 h-10 rounded-full bg-black/5 hover:bg-black/10 flex items-center justify-center active:scale-90 transition-all flex-shrink-0"
                   >
                     <X className="w-4 h-4 text-[#0E0509]" />
