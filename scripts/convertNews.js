@@ -130,10 +130,11 @@ for (let R = range.s.r + 1; R <= range.e.r; ++R) {
             }
         }
     }
-    if (hasData && item.id) {
+    if (hasData && item.title) {
         // Post-processing
         // Ignore Excel slug, always generate from title for total consistency
         item.slug = slugify(item.title);
+        item.date = item.date || "01 ENE 2026";
         item.dateUrl = formatDateForUrl(item.date);
         item.subtitle = item.subtitle || "";
         item.description = ""; 
@@ -150,6 +151,15 @@ for (let R = range.s.r + 1; R <= range.e.r; ++R) {
         news.push(item);
     }
 }
+
+// Assign missing IDs
+let currentMaxId = Math.max(0, ...news.filter(n => n.id).map(n => n.id));
+news.forEach(item => {
+    if (!item.id) {
+        currentMaxId++;
+        item.id = currentMaxId;
+    }
+});
 
 // Order by id
 news.sort((a, b) => a.id - b.id);
